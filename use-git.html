@@ -45,9 +45,10 @@
 </script>
 
 
-        <meta name="keywords" content="渗透路上坑太多">
-        <meta name="description" content="渗透路上坑太多">
-        <title>渗透之路</title>
+        <meta name="keywords" content="git,">
+        <meta name="description" content="删除 github 相应仓库下的文件（不删除仓库）">
+        <meta name="author" content="LxKxC">
+        <title>删除 github 相应仓库下的文件（不删除仓库）</title>
     </head>
     <body>
         <article class="container">
@@ -63,34 +64,55 @@
   </ul>
 </header>
 
-            <article class="main tag">
-                <header class="site">
-                    <h1 class="title">渗透之路</h1>
-                    <h2 class="subtitle">渗透路上坑太多</h2>
-                </header>
-                <header class="header">
-                    <span class="title">标签 -</span>
-                    <span class="subtitle">2 篇文章</span>
-                </header>
-                <ul class="tag-list clearfix">
+            <article class="main article">
+                <h1 class="title">删除 github 相应仓库下的文件（不删除仓库）</h1>
+                <section class="info">
+                    <span class="avatar" style="background-image: url(/images/avatar.png);"></span>
+                    <a class="name" href="/about.me.html">LxKxC</a>
                     
-                    <li class="tag-item">
-                        <a class="tag-name" href="/tag/%e6%bc%8f%e6%b4%9e/index.html">漏洞<span class="tag-count"> (1)</span></a>
-                    </li>
+                    <span class="date" data-time="1540544400"><span class="from"></span></span>
                     
-                    <li class="tag-item">
-                        <a class="tag-name" href="/tag/git/index.html">git<span class="tag-count"> (1)</span></a>
-                    </li>
+                    <span class="tags"><a class="tag" href="/tag/git/index.html">git</a></span>
+                </section>
+                <article class="content"><ol>
+<li><p><code>git clone https://github.com/LxKxC/LxKxC.github.io.git #</code> 将仓库克隆 到本地</p></li>
+
+<li><p>进入到本地仓库文件夹 将想要删除的文件删除</p></li>
+
+<li><p>右键 <code>git bash here</code></p></li>
+
+<li><p><code>git add .</code></p></li>
+
+<li><p><code>git commit -m &quot;say some thing &quot;</code>  双引号中内容按照自己需求填写</p></li>
+
+<li><p><code>git push -u origin master</code></p></li>
+</ol>
+</article>
+                <section class="author">
+                    <div class="avatar" style="background-image: url(/images/avatar.png);"></div>
+                    <a class="name" href="/about.me.html">LxKxC</a>
+                    <div class="intro">又懒又肥又宅</div>
+                </section>
+                <section class="recommend">
                     
-                    <li class="tag-item">
-                        <a class="tag-name" href="/tag/POC/index.html">POC<span class="tag-count"> (1)</span></a>
-                    </li>
+                    <section class="nav prev">
+                        <div class="head">上篇文章</div>
+                        <a class="link" href="/searchsploit-namp.html">使用searchsploit 搭配nmap扫描结果自动寻找组件漏洞</a>
+                    </section>
                     
-                    <li class="tag-item">
-                        <a class="tag-name" href="/tag/CVE/index.html">CVE<span class="tag-count"> (1)</span></a>
-                    </li>
                     
-                </ul>
+                </section>
+                
+    <section id="disqus_thread"></section>
+    <script type="text/javascript">
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//username.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
+
             </article>
         </article>
         <footer class="footer">
@@ -103,6 +125,6 @@
     <span class="publish">Powered by <a href="http://www.chole.io/" target="_blank">Ink</a></span>
 </footer>
 
+        <script src="/bundle/index.js"></script>
     </body>
-    <script src="/bundle/index.js"></script>
 </html>

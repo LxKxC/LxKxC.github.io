@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>渗透之路</title>
   <id>http://LxKxC.github.io</id>
-  <updated>2018-11-01T18:04:15+08:00</updated>
+  <updated>2018-11-01T18:16:54+08:00</updated>
   <subtitle>渗透路上坑太多</subtitle>
   <link href="http://LxKxC.github.io"></link>
   <author>
@@ -11,7 +11,7 @@
     <title>CVE-2018-4407苹果操作系统内核堆缓冲区溢出漏洞验证POC</title>
     <updated>2018-11-01T18:00:00+08:00</updated>
     <id>tag:LxKxC.github.io,2018-11-01:/cve-2018-4407.html</id>
-    <content type="html">&lt;p&gt;影响苹果系统哦！我看你们更不更新成IOS12&lt;/p&gt;&#xA;</content>
+    <content type="html">&lt;p&gt;影响苹果系统哦&lt;del&gt;不更新IOS12就捣蛋呦&lt;/del&gt;&lt;/p&gt;&#xA;</content>
     <link href="http://LxKxC.github.io/cve-2018-4407.html"></link>
     <author>
       <name>LxKxC</name>

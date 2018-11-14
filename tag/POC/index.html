@@ -44,6 +44,28 @@
     var root = '';
 </script>
 
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
+
 
         <meta name="keywords" content="渗透路上坑太多">
         <meta name="description" content="渗透路上坑太多">
@@ -67,15 +89,15 @@
                 <header class="header site">
                     
                         <img class="logo" src="/images/avatar.png" />
-                        <h1 class="tag">POC</h1>
+                        <h1 class="tag">poc</h1>
                         <h2 class="tag-sub">1 篇文章</h2>
                     
                 </header>
                 <ul class="article-list">
                     
                     <li class="article">
-                        <a class="title" href="/searchsploit-namp.html">使用searchsploit 搭配nmap扫描结果自动寻找组件漏洞</a>
-                        <div class="cover" style="background-image:url(//images/cve-2018-4407.png);"></div>
+                        <a class="title" href="/cve-2018-4407.html">CVE-2018-4407苹果操作系统内核堆缓冲区溢出漏洞验证POC</a>
+                        <div class="cover" style="background-image:url(/images/cve-2018-4407.png);"></div>
                         <section class="preview content"><p>影响苹果系统哦<del>不更新IOS12就捣蛋呦</del></p>
 </section>
                         <section class="info">

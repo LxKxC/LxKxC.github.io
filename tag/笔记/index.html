@@ -44,6 +44,28 @@
     var root = '';
 </script>
 
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
+
 
         <meta name="keywords" content="渗透路上坑太多">
         <meta name="description" content="渗透路上坑太多">
@@ -68,10 +90,27 @@
                     
                         <img class="logo" src="/images/avatar.png" />
                         <h1 class="tag">笔记</h1>
-                        <h2 class="tag-sub">1 篇文章</h2>
+                        <h2 class="tag-sub">2 篇文章</h2>
                     
                 </header>
                 <ul class="article-list">
+                    
+                    <li class="article">
+                        <a class="title" href="/ink-create-md.html">为纸小墨一键创建md文件</a>
+                        
+                        <section class="preview content"><p>为纸小墨自动生成md文件信息头</p>
+</section>
+                        <section class="info">
+                            
+                            
+                            
+                            <span class="date" data-time="1542165926"><span class="from"></span></span>
+                            
+                            <span class="tags">
+                            <a class="tag" href="/tag/%e7%ac%94%e8%ae%b0/index.html">笔记</a><a class="tag" href="/tag//index.html"></a>
+                            </span>
+                        </section>
+                    </li>
                     
                     <li class="article">
                         <a class="title" href="/odds-and-ends.html"><span class="top">[置顶]</span>零碎的笔记</a>

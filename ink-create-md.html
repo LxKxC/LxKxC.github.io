@@ -44,8 +44,30 @@
     var root = '';
 </script>
 
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
 
-        <meta name="keywords" content=",">
+
+        <meta name="keywords" content="笔记,,">
         <meta name="description" content="为纸小墨一键创建md文件">
         <meta name="author" content="">
         <title>为纸小墨一键创建md文件</title>
@@ -72,7 +94,7 @@
                     
                     <span class="date" data-time="1542165926"><span class="from"></span></span>
                     
-                    <span class="tags"><a class="tag" href="/tag//index.html"></a></span>
+                    <span class="tags"><a class="tag" href="/tag/%e7%ac%94%e8%ae%b0/index.html">笔记</a><a class="tag" href="/tag//index.html"></a></span>
                 </section>
                 <article class="content"><p>用法：</p>
 

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1">
+<meta name="renderer" content="webkit">
+<meta name="google" value="notranslate">
+<meta name="robots" content="index,follow">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="渗透之路">
+<meta name="twitter:description" content="渗透路上坑太多">
+<meta name="twitter:image:src" content="http://LxKxC.github.io/images/avatar.png">
+
+<meta property="og:url" content="http://LxKxC.github.io">
+<meta property="og:title" content="渗透之路">
+<meta property="og:description" content="渗透路上坑太多">
+<meta property="og:site_name" content="渗透之路">
+<meta property="og:image" content="http://LxKxC.github.io/images/avatar.png">
+<meta property="og:type" content="website">
+<meta name="robots" content="noodp">
+
+<meta itemprop="name" content="渗透之路">
+<meta itemprop="description" content="渗透路上坑太多">
+<meta itemprop="image" content="http://LxKxC.github.io/images/avatar.png">
+
+<link rel="canonical" href="http://LxKxC.github.io">
+
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-itouch-icon" href="/favicon.png">
+<link rel="stylesheet" href="/bundle/index.css">
+<script type="text/javascript">
+    var timeSinceLang = {
+        year: '年前',
+        month: '个月前',
+        day: '天前',
+        hour: '小时前',
+        minute: '分钟前',
+        second: '秒前'
+    };
+    var root = '';
+</script>
+
+
+        <meta name="keywords" content=",">
+        <meta name="description" content="为纸小墨一键创建md文件">
+        <meta name="author" content="">
+        <title>为纸小墨一键创建md文件</title>
+    </head>
+    <body>
+        <article class="container">
+            <header class="header-wrap">
+  <a class="index" href="/">
+    <img class="logo" src="/images/avatar.png" />
+    渗透之路
+  </a>
+  <ul class="menu">
+      <li class="menu-item"><a href="/archive.html">归档</a></li>
+      <li class="menu-item"><a href="/tag.html">标签</a></li>
+      <li class="menu-item"><a href="/atom.xml">订阅</a></li>
+  </ul>
+</header>
+
+            <article class="main article">
+                <h1 class="title">为纸小墨一键创建md文件</h1>
+                <section class="info">
+                    
+                    
+                    
+                    <span class="date" data-time="1542165926"><span class="from"></span></span>
+                    
+                    <span class="tags"><a class="tag" href="/tag//index.html"></a></span>
+                </section>
+                <article class="content"><p>用法：</p>
+
+<pre><code>python MakeMD4ink-win.py file_name [article_title] [author_id]
+# []括起来为可选项
+</code></pre>
+
+<pre><code>#!/usr/bin/env python
+import sys
+import time
+
+#python automake.py file_name [article_title] [author_id]
+
+def main():
+    file_name = ''
+    post_title = ''
+    author = 'me'
+
+    if len(sys.argv) == 2:
+        file_name = str(sys.argv[1])
+        post_title = str(sys.argv[1])
+    elif len(sys.argv) == 3:
+        file_name = str(sys.argv[1])
+        post_title = str(sys.argv[2])
+    elif len(sys.argv) == 4:
+        file_name = str(sys.argv[1])
+        post_title = str(sys.argv[2])
+        author = str(sys.argv[3])
+    else:
+        print(&quot;Usage: \n\t%s file_name [article_title] [author_id]&quot; % sys.argv[0])
+        return
+
+    with open('%s.md' % file_name, 'w') as f:
+        f.write('title: %s\n' % post_title)
+        f.write('date: %s\n' % time.strftime(&quot;%Y-%m-%d %H:%M:%S&quot;, time.localtime()))
+        f.write('update: &quot;&quot;\n')
+        f.write('author: %s\n' % author)
+        f.write('tags: \n')
+        f.write('- \n')
+        f.write('categories: \n')
+        f.write('- \n')
+        f.write('topic: &quot;&quot;\n')
+        f.write('cover: &quot;&quot;\n')
+        f.write('draft: false\n')
+        f.write('preview: &quot;&quot;\n')
+        f.write('top: false\n')
+        f.write('type: &quot;&quot;\n')
+        f.write('hide: false\n')
+        f.write('config: null\n')
+        f.write('\n\n---\n\n\n\n')
+    print('Create %s.md Finished' % file_name)
+
+
+if __name__ == '__main__':
+    main()
+</code></pre>
+
+<blockquote>
+<p>本文作者： Akkuman</p>
+
+<p>本文链接： <a href="http://hacktech.cn/2018/08/22/ink-create-md.html">http://hacktech.cn/2018/08/22/ink-create-md.html</a></p>
+</blockquote>
+</article>
+                <section class="author">
+                    
+                    <a class="name" href="/about..html"></a>
+                    <div class="intro"></div>
+                </section>
+                <section class="recommend">
+                    
+                    <section class="nav prev more">
+                        <div class="head">上篇文章</div>
+                        <a class="link" href="/odds-and-ends.html">零碎的笔记</a>
+                    </section>
+                    
+                    
+                    <section class="nav next more">
+                        <div class="head">下篇文章</div>
+                        <a class="link" href="/cve-2018-4407.html">CVE-2018-4407苹果操作系统内核堆缓冲区溢出漏洞验证POC</a>
+                    </section>
+                    
+                </section>
+                
+    <section id="disqus_thread"></section>
+    <script type="text/javascript">
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//username.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
+
+            </article>
+        </article>
+        <footer class="footer">
+    <span class="copyright">
+        渗透之路 ©
+        <script type="text/javascript">
+            document.write(new Date().getFullYear());
+        </script>
+    </span>
+    <span class="publish">Powered by <a href="https://lxkxc.github.io/" target="_blank">lxkxc</a></span>
+</footer>
+
+        <script src="/bundle/index.js"></script>
+    </body>
+</html>

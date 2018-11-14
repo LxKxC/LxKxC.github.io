@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>渗透之路</title>
   <id>http://LxKxC.github.io</id>
-  <updated>2018-11-10T16:39:05+08:00</updated>
+  <updated>2018-11-14T11:31:40+08:00</updated>
   <subtitle>渗透路上坑太多</subtitle>
   <link href="http://LxKxC.github.io"></link>
   <author>
@@ -16,6 +16,13 @@
     <author>
       <name>LxKxC</name>
     </author>
+  </entry>
+  <entry>
+    <title>为纸小墨一键创建md文件</title>
+    <updated>2018-11-14T11:25:26+08:00</updated>
+    <id>tag:LxKxC.github.io,2018-11-14:/ink-create-md.html</id>
+    <content type="html"></content>
+    <link href="http://LxKxC.github.io/ink-create-md.html"></link>
   </entry>
   <entry>
     <title>CVE-2018-4407苹果操作系统内核堆缓冲区溢出漏洞验证POC</title>

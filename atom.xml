@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>渗透之路</title>
   <id>http://LxKxC.github.io</id>
-  <updated>2018-11-14T11:51:06+08:00</updated>
+  <updated>2018-11-26T18:50:17+08:00</updated>
   <subtitle>渗透路上坑太多</subtitle>
   <link href="http://LxKxC.github.io"></link>
   <author>
@@ -9,8 +9,8 @@
   </author>
   <entry>
     <title>零碎的笔记</title>
-    <updated>2018-11-10T16:20:00+08:00</updated>
-    <id>tag:LxKxC.github.io,2018-11-10:/odds-and-ends.html</id>
+    <updated>2018-11-26T18:50:00+08:00</updated>
+    <id>tag:LxKxC.github.io,2018-11-26:/odds-and-ends.html</id>
     <content type="html">&lt;p&gt;一些零碎的笔记&lt;/p&gt;&#xA;</content>
     <link href="http://LxKxC.github.io/odds-and-ends.html"></link>
     <author>
